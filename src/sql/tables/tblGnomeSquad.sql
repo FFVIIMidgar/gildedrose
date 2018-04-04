@@ -1,0 +1,11 @@
+USE `gildedrose`;
+
+CREATE TABLE `tblGnomeSquad` (
+	`ID` INT NOT NULL AUTO_INCREMENT,
+	`RoomID` INT NOT NULL,
+	`Date` DATETIME NOT NULL,
+	`Order` INT NOT NULL,
+	`Duration` VARCHAR(45) NOT NULL,
+	PRIMARY KEY (`ID`),
+	UNIQUE INDEX `ID_UNIQUE` (`ID` ASC)
+);

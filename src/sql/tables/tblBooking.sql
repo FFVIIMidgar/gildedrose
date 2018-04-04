@@ -1,0 +1,12 @@
+USE `gildedrose`;
+
+CREATE TABLE `tblBooking` (
+	`ID` INT NOT NULL AUTO_INCREMENT,
+	`GuestID` INT NOT NULL,
+	`RoomID` INT NOT NULL,
+	`CheckInDate` DATETIME NOT NULL,
+	`CheckOutDate` DATETIME NOT NULL,
+	`ItemCount` INT NOT NULL,
+ 	PRIMARY KEY (`ID`),
+	UNIQUE INDEX `ID_UNIQUE` (`ID` ASC)
+);
