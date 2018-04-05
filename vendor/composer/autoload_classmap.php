@@ -6,7 +6,18 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'API\\Controller\\HelloController' => $baseDir . '/src/api/controllers/HelloController.php',
+    'API\\Controller\\Base_Controller' => $baseDir . '/src/api/controllers/Base_Controller.php',
+    'API\\Controller\\Room_Controller' => $baseDir . '/src/api/controllers/Room_Controller.php',
+    'API\\DAO\\Base_DAO' => $baseDir . '/src/api/daos/Base_DAO.php',
+    'API\\DAO\\Room_DAO' => $baseDir . '/src/api/daos/Room_DAO.php',
+    'API\\Database\\Database' => $baseDir . '/src/api/database/Database.php',
+    'API\\Model\\Base_Model' => $baseDir . '/src/api/models/Base_Model.php',
+    'API\\Model\\Booking_Model' => $baseDir . '/src/api/models/Booking_Model.php',
+    'API\\Model\\Gnome_Squad_Model' => $baseDir . '/src/api/models/Gnome_Squad_Model.php',
+    'API\\Model\\Guest_Model' => $baseDir . '/src/api/models/Guest_Model.php',
+    'API\\Model\\Room_Model' => $baseDir . '/src/api/models/Room_Model.php',
+    'API\\Service\\Base_Service' => $baseDir . '/src/api/services/Base_Service.php',
+    'API\\Service\\Room_Service' => $baseDir . '/src/api/services/Room_Service.php',
     'FastRoute\\BadRouteException' => $vendorDir . '/nikic/fast-route/src/BadRouteException.php',
     'FastRoute\\DataGenerator' => $vendorDir . '/nikic/fast-route/src/DataGenerator.php',
     'FastRoute\\DataGenerator\\CharCountBased' => $vendorDir . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',

@@ -1,4 +1,3 @@
 <?php
-use \Psr\Http\Message\ServerRequestInterface as Request;
-use \Psr\Http\Message\ResponseInterface as Response;
+$app->get('/api/v1/rooms/available', 'Room_Controller:get_room_availability');
 ?>

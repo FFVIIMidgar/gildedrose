@@ -72,7 +72,18 @@ class ComposerStaticInitf2daf2060c30d1184dc7ae807cd9d3f5
     );
 
     public static $classMap = array (
-        'API\\Controller\\HelloController' => __DIR__ . '/../..' . '/src/api/controllers/HelloController.php',
+        'API\\Controller\\Base_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Base_Controller.php',
+        'API\\Controller\\Room_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Room_Controller.php',
+        'API\\DAO\\Base_DAO' => __DIR__ . '/../..' . '/src/api/daos/Base_DAO.php',
+        'API\\DAO\\Room_DAO' => __DIR__ . '/../..' . '/src/api/daos/Room_DAO.php',
+        'API\\Database\\Database' => __DIR__ . '/../..' . '/src/api/database/Database.php',
+        'API\\Model\\Base_Model' => __DIR__ . '/../..' . '/src/api/models/Base_Model.php',
+        'API\\Model\\Booking_Model' => __DIR__ . '/../..' . '/src/api/models/Booking_Model.php',
+        'API\\Model\\Gnome_Squad_Model' => __DIR__ . '/../..' . '/src/api/models/Gnome_Squad_Model.php',
+        'API\\Model\\Guest_Model' => __DIR__ . '/../..' . '/src/api/models/Guest_Model.php',
+        'API\\Model\\Room_Model' => __DIR__ . '/../..' . '/src/api/models/Room_Model.php',
+        'API\\Service\\Base_Service' => __DIR__ . '/../..' . '/src/api/services/Base_Service.php',
+        'API\\Service\\Room_Service' => __DIR__ . '/../..' . '/src/api/services/Room_Service.php',
         'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
         'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',
         'FastRoute\\DataGenerator\\CharCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',
