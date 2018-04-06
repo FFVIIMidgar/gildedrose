@@ -9,6 +9,7 @@ return array(
     'API\\Controller\\Base_Controller' => $baseDir . '/src/api/controllers/Base_Controller.php',
     'API\\Controller\\Room_Controller' => $baseDir . '/src/api/controllers/Room_Controller.php',
     'API\\DAO\\Base_DAO' => $baseDir . '/src/api/daos/Base_DAO.php',
+    'API\\DAO\\Booking_DAO' => $baseDir . '/src/api/daos/Booking_DAO.php',
     'API\\DAO\\Room_DAO' => $baseDir . '/src/api/daos/Room_DAO.php',
     'API\\Database\\Database' => $baseDir . '/src/api/database/Database.php',
     'API\\Model\\Base_Model' => $baseDir . '/src/api/models/Base_Model.php',

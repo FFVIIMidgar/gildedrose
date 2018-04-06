@@ -75,6 +75,7 @@ class ComposerStaticInitf2daf2060c30d1184dc7ae807cd9d3f5
         'API\\Controller\\Base_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Base_Controller.php',
         'API\\Controller\\Room_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Room_Controller.php',
         'API\\DAO\\Base_DAO' => __DIR__ . '/../..' . '/src/api/daos/Base_DAO.php',
+        'API\\DAO\\Booking_DAO' => __DIR__ . '/../..' . '/src/api/daos/Booking_DAO.php',
         'API\\DAO\\Room_DAO' => __DIR__ . '/../..' . '/src/api/daos/Room_DAO.php',
         'API\\Database\\Database' => __DIR__ . '/../..' . '/src/api/database/Database.php',
         'API\\Model\\Base_Model' => __DIR__ . '/../..' . '/src/api/models/Base_Model.php',

@@ -8,6 +8,7 @@ class Room_Model extends Base_Model {
 	private $room_number;
 	private $max_occupancy;
 	private $max_storage;
+	private $bookings;
 
 	public function __construct($id, $room_number, $max_occupancy, $max_storage, $bookings) {
 		parent::__construct();
@@ -16,6 +17,7 @@ class Room_Model extends Base_Model {
 		$this->room_number = $room_number;
 		$this->max_occupancy = $max_occupancy;
 		$this->max_storage = $max_storage;
+		$this->bookings = $bookings;
 	}
 
 	public function get_id() {
@@ -32,6 +34,38 @@ class Room_Model extends Base_Model {
 
 	public function get_max_storage() {
 		return $this->max_storage;
+	}
+
+	public function get_bookings() {
+		return $this->bookings;
+	}
+
+	public function add_booking($booking) {
+		$this->bookings[] = $booking;
+	}
+
+	public function get_guest_occupancy_by_date($date) {
+		$occupancy = 0;
+
+		foreach ($this->bookings as $booking) {
+			if ($booking->get_check_in_date() === $date) {
+				$occupancy++;
+			}
+		}
+
+		return $occupancy;
+	}
+
+	public function get_storage_occupancy_by_date($date) {
+		$occupancy = 0;
+
+		foreach ($this->bookings as $booking) {
+			if ($booking->get_check_in_date() === $date) {
+				$occupancy += $booking->get_item_count();
+			}
+		}
+
+		return $occupancy;
 	}
 }
 ?>

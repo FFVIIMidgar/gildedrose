@@ -42,7 +42,7 @@ class Booking_Model extends Base_Model {
 		return $this->check_out_date;
 	}
 
-	pubic function item_count() {
+	public function get_item_count() {
 		return $this->item_count;
 	}
 }

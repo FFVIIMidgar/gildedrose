@@ -2,10 +2,10 @@
 namespace API\Service;
 
 class Base_Service {
-	private $daos;
+	protected $dao;
 
-	public function __construct($daos) {
-		$this->daos = $daos;
+	public function __construct($dao) {
+		$this->dao = $dao;
 	}
 }
 ?>
