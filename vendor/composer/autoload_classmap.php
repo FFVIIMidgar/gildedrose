@@ -7,9 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'API\\Controller\\Base_Controller' => $baseDir . '/src/api/controllers/Base_Controller.php',
+    'API\\Controller\\Booking_Controller' => $baseDir . '/src/api/controllers/Booking_Controller.php',
     'API\\Controller\\Room_Controller' => $baseDir . '/src/api/controllers/Room_Controller.php',
     'API\\DAO\\Base_DAO' => $baseDir . '/src/api/daos/Base_DAO.php',
     'API\\DAO\\Booking_DAO' => $baseDir . '/src/api/daos/Booking_DAO.php',
+    'API\\DAO\\Gnome_Squad_DAO' => $baseDir . '/src/api/daos/Gnome_Squad_DAO.php',
+    'API\\DAO\\Guest_DAO' => $baseDir . '/src/api/daos/Guest_DAO.php',
     'API\\DAO\\Room_DAO' => $baseDir . '/src/api/daos/Room_DAO.php',
     'API\\Database\\Database' => $baseDir . '/src/api/database/Database.php',
     'API\\Model\\Base_Model' => $baseDir . '/src/api/models/Base_Model.php',
@@ -18,6 +21,9 @@ return array(
     'API\\Model\\Guest_Model' => $baseDir . '/src/api/models/Guest_Model.php',
     'API\\Model\\Room_Model' => $baseDir . '/src/api/models/Room_Model.php',
     'API\\Service\\Base_Service' => $baseDir . '/src/api/services/Base_Service.php',
+    'API\\Service\\Booking_Service' => $baseDir . '/src/api/services/Booking_Service.php',
+    'API\\Service\\Gnome_Squad_Service' => $baseDir . '/src/api/services/Gnome_Squad_Service.php',
+    'API\\Service\\Guest_Service' => $baseDir . '/src/api/services/Guest_Service.php',
     'API\\Service\\Room_Service' => $baseDir . '/src/api/services/Room_Service.php',
     'FastRoute\\BadRouteException' => $vendorDir . '/nikic/fast-route/src/BadRouteException.php',
     'FastRoute\\DataGenerator' => $vendorDir . '/nikic/fast-route/src/DataGenerator.php',

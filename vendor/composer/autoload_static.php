@@ -73,9 +73,12 @@ class ComposerStaticInitf2daf2060c30d1184dc7ae807cd9d3f5
 
     public static $classMap = array (
         'API\\Controller\\Base_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Base_Controller.php',
+        'API\\Controller\\Booking_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Booking_Controller.php',
         'API\\Controller\\Room_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Room_Controller.php',
         'API\\DAO\\Base_DAO' => __DIR__ . '/../..' . '/src/api/daos/Base_DAO.php',
         'API\\DAO\\Booking_DAO' => __DIR__ . '/../..' . '/src/api/daos/Booking_DAO.php',
+        'API\\DAO\\Gnome_Squad_DAO' => __DIR__ . '/../..' . '/src/api/daos/Gnome_Squad_DAO.php',
+        'API\\DAO\\Guest_DAO' => __DIR__ . '/../..' . '/src/api/daos/Guest_DAO.php',
         'API\\DAO\\Room_DAO' => __DIR__ . '/../..' . '/src/api/daos/Room_DAO.php',
         'API\\Database\\Database' => __DIR__ . '/../..' . '/src/api/database/Database.php',
         'API\\Model\\Base_Model' => __DIR__ . '/../..' . '/src/api/models/Base_Model.php',
@@ -84,6 +87,9 @@ class ComposerStaticInitf2daf2060c30d1184dc7ae807cd9d3f5
         'API\\Model\\Guest_Model' => __DIR__ . '/../..' . '/src/api/models/Guest_Model.php',
         'API\\Model\\Room_Model' => __DIR__ . '/../..' . '/src/api/models/Room_Model.php',
         'API\\Service\\Base_Service' => __DIR__ . '/../..' . '/src/api/services/Base_Service.php',
+        'API\\Service\\Booking_Service' => __DIR__ . '/../..' . '/src/api/services/Booking_Service.php',
+        'API\\Service\\Gnome_Squad_Service' => __DIR__ . '/../..' . '/src/api/services/Gnome_Squad_Service.php',
+        'API\\Service\\Guest_Service' => __DIR__ . '/../..' . '/src/api/services/Guest_Service.php',
         'API\\Service\\Room_Service' => __DIR__ . '/../..' . '/src/api/services/Room_Service.php',
         'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
         'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',

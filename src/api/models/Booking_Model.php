@@ -10,8 +10,10 @@ class Booking_Model extends Base_Model {
 	private $check_in_date;
 	private $check_out_date;
 	private $item_count;
+	private $guest;
+	private $room;
 
-	public function __construct($id, $guest_id, $room_id, $check_in_date, $check_out_date, $item_count) {
+	public function __construct($id, $guest_id, $room_id, $check_in_date, $check_out_date, $item_count, $guest, $room) {
 		parent::__construct();
 
 		$this->id = $id;
@@ -20,6 +22,8 @@ class Booking_Model extends Base_Model {
 		$this->check_in_date = $check_in_date;
 		$this->check_out_date = $check_out_date;
 		$this->item_count = $item_count;
+		$this->guest = $guest;
+		$this->room = $room;
 	}
 
 	public function get_id() {
@@ -44,6 +48,14 @@ class Booking_Model extends Base_Model {
 
 	public function get_item_count() {
 		return $this->item_count;
+	}
+
+	public function get_guest() {
+		return $this->guest;
+	}
+
+	public function get_room() {
+		return $this->room;
 	}
 }
 ?>

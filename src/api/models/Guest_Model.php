@@ -18,6 +18,10 @@ class Guest_Model extends Base_Model {
 		$this->email = $email;
 	}
 
+	public function set_id($id) {
+		$this->id = $id;
+	}
+
 	public function get_id() {
 		return $this->id;
 	}

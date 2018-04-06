@@ -7,14 +7,16 @@ class Gnome_Squad_Model extends Base_Model {
 	private $id;
 	private $room_id;
 	private $date;
-	private $duration;
+	private $start_time;
+	private $end_time;
 
-	public function __construct($id, $room_id, $date, $duration) {
+	public function __construct($id, $room_id, $date, $start_time, $end_time) {
 		parent::__construct();
 		$this->id = $id;
 		$this->room_id = $room_id;
 		$this->date = $date;
-		$this->duration = $duration;
+		$this->start_time = $start_time;
+		$this->end_time = $end_time;
 	}
 
 	public function get_id() {
@@ -29,8 +31,12 @@ class Gnome_Squad_Model extends Base_Model {
 		return $this->date;
 	}
 
-	public function get_duration() {
-		return $this->duration;
+	public function get_start_time() {
+		return $this->start_time;
+	}
+
+	public function get_end_time() {
+		return $this->end_time;
 	}
 }
 ?>

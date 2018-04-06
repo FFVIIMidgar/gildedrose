@@ -56,6 +56,10 @@ class Room_Model extends Base_Model {
 		return $occupancy;
 	}
 
+	public function get_remaining_guest_occupancy_by_date($date) {
+		return $this->max_occupancy - $this->get_guest_occupancy_by_date($date);
+	}
+
 	public function get_storage_occupancy_by_date($date) {
 		$occupancy = 0;
 
@@ -66,6 +70,10 @@ class Room_Model extends Base_Model {
 		}
 
 		return $occupancy;
+	}
+
+	public function get_remaining_storage_occupancy_by_date($date) {
+		return $this->max_storage - $this->get_storage_occupancy_by_date($date);
 	}
 }
 ?>

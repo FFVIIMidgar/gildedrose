@@ -3,6 +3,7 @@ namespace API\Service;
 
 use \API\DAO\Booking_DAO;
 use \API\Model\Booking_Model;
+use \API\Model\Guest_Model;
 use \API\Model\Room_Model;
 use \API\Service\Base_Service;
 
@@ -25,19 +26,16 @@ class Room_Service extends Base_Service {
 		$results = $booking_dao->get_bookings_by_check_in_date($date);
 
 		foreach ($results as $row) {
-			$check_in_date = new \DateTime($row['CheckInDate']);
-			$check_in_date = $check_in_date->format('Y-m-d');
-			$check_out_date = new \DateTime($row['CheckOutDate']);
-			$check_out_date = $check_out_date->format('Y-m-d');
-
-			$booking = new Booking_Model($row['ID'], $row['GuestID'], $row['RoomID'], $check_in_date, $check_out_date, $row['ItemCount']);
+			$guest = new Guest_Model($row['GuestID'], $row['FirstName'], $row['LastName'], $row['Email']);
+			$booking = new Booking_Model($row['BookingID'], $row['GuestID'], $row['RoomID'], $row['CheckInDate'], $row['CheckOutDate'], $row['ItemCount'], $guest, null);
 			$rooms[$booking->get_room_id()]->add_booking($booking);
 		}
 
 		foreach ($rooms as $room) {
 			$room_storage_remaining = $room->get_max_storage() - $room->get_storage_occupancy_by_date($date);
 
-			if (($room->get_guest_occupancy_by_date($date) < $room->get_max_occupancy()) && ($room_storage_remaining >= $item_count)) {
+			if (($room->get_guest_occupancy_by_date($date) < $room->get_max_occupancy()) && 
+				($room->get_remaining_storage_occupancy_by_date($date) >= $item_count)) {
 				$available_rooms[] = $room;
 			}
 		}
@@ -61,7 +59,7 @@ class Room_Service extends Base_Service {
 				'remainingGuestOccupancy'   => $room->get_max_occupancy() - $room->get_guest_occupancy_by_date($date),
 				'maxGuestOccupancy'         => $room->get_max_occupancy(),
 				'storageOccupancy'          => $room->get_storage_occupancy_by_date($date),
-				'remainingStorageOccupancy' => $room->get_max_storage() - $room->get_storage_occupancy_by_date($date),
+				'remainingStorageOccupancy' => $room->get_remaining_storage_occupancy_by_date($date),
 				'maxStorageOccupancy'       => $room->get_max_storage()
 			];
 
