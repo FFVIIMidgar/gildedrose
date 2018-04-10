@@ -212,6 +212,7 @@ are presents. Input validation would need to be implemented on a parameter level
 correct format.
 * More flexibiity with the API endpoints. For example management could get the Gnome Cleaning Squad schedule between a start and end date,
 or a guest can view all room availabilities between a start and end date.
+* Add authentication (i.e. JWT tokens) for accessing API endpoints.
 * Unit testing and automated testing. A good system also has a good testing suite. Unit testing would be done with PHPUnit. System-wide and
 automated testing could use scripts or a tool such as Selenium.
 
