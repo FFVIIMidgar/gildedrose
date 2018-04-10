@@ -96,7 +96,7 @@ business logic.
 
 Inside of the **`sql`** folder is the following:
 
-* **`data/`** - Constains SQL code to insert default data in tables.
+* **`data/`** - Contains SQL code to insert default data in tables.
 * **`schemas/`** - Contains SQL code to create schemas.
 * **`tables/`** - Contains SQL code to create tables.
 
@@ -140,6 +140,8 @@ It is assumed that input will be valid. Dates must be entered in YYYY-MM-DD form
 that the request body is well-formed and all of the required parameters are present. It does not check if the parameters are in the
 correct formats.
 
+The response from each of the API endpoints is in JSON.
+
 ### Method 1
 I have created and provided a simple command-line UI that imitates a hotel booking system. This UI makes the API calls in the code, 
 so all the user has to do is follow the prompts.
@@ -161,7 +163,7 @@ The following URLs are the API endpoints:
 
 * `http://localhost/gildedrose/api/v1/booking/book`
 	* This is a POST request
-	* The request body must be in the following format:
+	* The request body must be in the following JSON format:
 	```javascript
 	{ 
 		"firstName": "John"
