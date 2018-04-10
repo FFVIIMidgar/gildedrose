@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'API\\Controller\\Base_Controller' => $baseDir . '/src/api/controllers/Base_Controller.php',
     'API\\Controller\\Booking_Controller' => $baseDir . '/src/api/controllers/Booking_Controller.php',
+    'API\\Controller\\Gnome_Squad_Controller' => $baseDir . '/src/api/controllers/Gnome_Squad_Controller.php',
     'API\\Controller\\Room_Controller' => $baseDir . '/src/api/controllers/Room_Controller.php',
     'API\\DAO\\Base_DAO' => $baseDir . '/src/api/daos/Base_DAO.php',
     'API\\DAO\\Booking_DAO' => $baseDir . '/src/api/daos/Booking_DAO.php',

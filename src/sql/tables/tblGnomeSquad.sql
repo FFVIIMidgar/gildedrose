@@ -1,3 +1,11 @@
+/**
+ * tblGnomeSquad.sql
+ *
+ * Creates the tblGnomeSquad table.
+ *
+ * @author A.J. Rodriguez <avrodriguezjr@gmail.com>
+ */
+
 USE `gildedrose`;
 
 CREATE TABLE `tblGnomeSquad` (

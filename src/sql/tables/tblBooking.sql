@@ -1,3 +1,11 @@
+/**
+ * tblBooking.sql
+ *
+ * Creates the tblBooking table.
+ *
+ * @author A.J. Rodriguez <avrodriguezjr@gmail.com>
+ */
+
 USE `gildedrose`;
 
 CREATE TABLE `tblBooking` (

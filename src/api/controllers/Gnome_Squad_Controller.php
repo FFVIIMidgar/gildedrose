@@ -1,11 +1,11 @@
 <?php
 /**
- * Room_Controller
+ * Gnome_Squad_Controller
  *
- * Controller for room routes.
+ * Controller for Gnome Squad (cleaning) routes.
  *
  * @author A.J. Rodriguez <avrodriguezjr@gmail.com>
- */
+ */ 
 
 namespace API\Controller;
 
@@ -13,18 +13,18 @@ use \API\Controller\Base_Controller;
 use \DateTime;
 use \Exception;
 
-class Room_Controller extends Base_Controller {
+class Gnome_Squad_Controller extends Base_Controller {
 	/**
-	 * Constructs a new Room_Controller.
+	 * Constructs a new Gnome_Squad_Controller.
 	 *
-	 * @param \API\Service\Room_Service $service Associated service
+	 * @param \API\Service\Gnome_Squad_Service $service Associated Service
 	 */
 	public function __construct($service) {
 		parent::__construct($service);
 	}
 
 	/**
-	 * Handles the /rooms/available route.
+	 * Handles the /management/schedule route.
 	 *
 	 * @param \Psr\Http\Message\ServerRequestInterface $request  Request
 	 * @param \Psr\Http\Message\ResponseInterface      $response Response
@@ -32,18 +32,17 @@ class Room_Controller extends Base_Controller {
 	 *
 	 * @return \Psr\Http\Message\ResponseInterface Response
 	 */
-	public function get_room_availability($request, $response, $args) {
+	public function get_gnome_squad_schedule($request, $response, $args) {
 		try {
 			// Extract and check parameters.
 			$date = $request->getParam('date') ? DateTime::createFromFormat('Y-m-d', $request->getParam('date')) : null;
-			$item_count = $request->getParam('itemCount') !== null ? intval($request->getParam('itemCount')) : null;
-			$this->check_request_parameters([$date, $item_count]);
+			$this->check_request_parameters([$date]);
 
-			// Get all available rooms on the given date with the given item count.
-			$available_rooms = $this->service->get_room_availability($date, $item_count);
-			
+			// Get all cleanings on the given date.
+			$cleanings = $this->service->get_cleanings_by_date($date);
+
 			// Send back the JSON results.
-			$response->getBody()->write($this->service->json_encode_available_rooms($date, $item_count, $available_rooms));
+			$response->getBody()->write($this->service->json_encode_gnome_squad_schedule($date, $cleanings));
 			return $response;
 		} catch (Exception $e) {
 			// Send back the error.

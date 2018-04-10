@@ -74,6 +74,7 @@ class ComposerStaticInitf2daf2060c30d1184dc7ae807cd9d3f5
     public static $classMap = array (
         'API\\Controller\\Base_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Base_Controller.php',
         'API\\Controller\\Booking_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Booking_Controller.php',
+        'API\\Controller\\Gnome_Squad_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Gnome_Squad_Controller.php',
         'API\\Controller\\Room_Controller' => __DIR__ . '/../..' . '/src/api/controllers/Room_Controller.php',
         'API\\DAO\\Base_DAO' => __DIR__ . '/../..' . '/src/api/daos/Base_DAO.php',
         'API\\DAO\\Booking_DAO' => __DIR__ . '/../..' . '/src/api/daos/Booking_DAO.php',
