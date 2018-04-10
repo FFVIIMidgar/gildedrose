@@ -46,7 +46,7 @@ and will move on to the next room immediately after.
 guest's storage requirements as closely as possible, to maximize profit. 
 	* P1: No other guests have occupied the room and the remaining storage occupancy is equal to the item count.
 	* P2: No other guests have occupied the room and the remaining storage occupancy is not equal to the item count.
-	* P3: Other guests have occupied the room and the remaining storage occupancy is equal to the item count.xa
+	* P3: Other guests have occupied the room and the remaining storage occupancy is equal to the item count.
 	* P4: Other guests have occupied the room and the remaining storage occupancy is not equal to the item count.
 
 
@@ -86,7 +86,7 @@ Inside of the **`api`** folder is the following:
 
 * **`controllers/`** - Contains all of the controllers. The controllers handle logic related to routing; being the layer between the frontend
 and the backend.
-* **`daos/`** - Contains all of the DAOs. THe DAOs handle communicating with the database.
+* **`daos/`** - Contains all of the DAOs. The DAOs handle communicating with the database.
 * **`database/`** - Contains code related to connecting to the database.
 * **`models/`** - Contains all of the models. The models are very self-contained and are essentially wrappers to database objects with additional
 business logic.
@@ -204,8 +204,8 @@ If I were given unlimited time I would do the following to extend the project:
 being something like 18 hours later. Maybe v3 could allow a guest to check in any time in the day and check out any time the next day, or even several days later. 
 This change would place greater stress on the Gnome Cleaning Squad as they could potentially clean the same room more than once in a day. 
 Additional logic would then be needed to make sure that the Gnome Cleaning Squad does not exceed 8 hours. Room availabilities would change significantly.
-* Currently the Gnome Cleaning Squad always spends 2 hours cleaning a 2 person room and 1.5 hours cleaning a 1 person room. The system could
-* be extended so that if only one person occupies a 2 person room, the Gnome Cleaning Squad only needs 1.5 hours to clean it.
+* Currently the Gnome Cleaning Squad always spends 2 hours cleaning a two person room and 1.5 hours cleaning a one person room. The system could
+be extended so that if only one person occupies a two person room, the Gnome Cleaning Squad only needs 1.5 hours to clean it.
 * Allow booking for up to 2 guests at one time.
 * More robust input validation and sanity checking. Currently the API checks to see if a request body is well-formed and all of the required parameters
 are presents. Input validation would need to be implemented on a parameter level, making sure each parameter is the correct data type and in the

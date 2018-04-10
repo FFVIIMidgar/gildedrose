@@ -104,8 +104,8 @@ class Gnome_Squad_Service extends Base_Service {
 		foreach ($cleanings as $cleaning) {
 			$json_data['gnomeSquadSchedule']['cleanings'][] = [
 				'roomNumber' => $cleaning->get_room()->get_room_number(),
-				'startTime' => $cleaning->get_start_time()->format('H:i:s'),
-				'endTime' => $cleaning->get_end_time()->format('H:i:s')
+				'startTime'  => $cleaning->get_start_time()->format('H:i:s'),
+				'endTime'    => $cleaning->get_end_time()->format('H:i:s')
 			];
 		}
 
