@@ -172,6 +172,10 @@ The following URLs are the API endpoints:
 	}
 	```
 
+* `http://localhost/gildedrose/api/v1/management/schedule?date={date}`
+	* This is a GET request
+	* **`{date}`** must be in YYYY-MM-DD format
+
 ## Post-Mortem
 
 ### Technical Documents and Consultation
@@ -206,6 +210,8 @@ Additional logic would then be needed to make sure that the Gnome Cleaning Squad
 * More robust input validation and sanity checking. Currently the API checks to see if a request body is well-formed and all of the required parameters
 are presents. Input validation would need to be implemented on a parameter level, making sure each parameter is the correct data type and in the
 correct format.
+* More flexibiity with the API endpoints. For example management could get the Gnome Cleaning Squad schedule between a start and end date,
+or a guest can view all room availabilities between a start and end date.
 * Unit testing and automated testing. A good system also has a good testing suite. Unit testing would be done with PHPUnit. System-wide and
 automated testing could use scripts or a tool such as Selenium.
 
